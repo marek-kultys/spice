@@ -25,12 +25,26 @@ Every spice recommendation is stored in the app. Users are able to favourite and
 
 ##### List of Spice Recommendations
 Users can access the list of all generated food-spice recommendations and:
+##### Controlled Vocabulary List of Flavours
+Underlying the entire system, there is a controlled Vocabulary List of flavours and ingredients defined in `/vocabulary.json` and used by the User and the Recommendation Engine. This list is centralised and no flavour or ingredient should be used in the app by the user of the system if it is not included in the Vocabulary List. All spelling should be consistent with the Vocabulary List.
 1. Browse the list
 2. Add the "favourite" tag on individual recommendations
 3. Remove the "favourite" tag from individual recommendations
 4. Delete individual recommendations
 5. Filter the list by ingredient, spice, favourite status, and date
 6. View an individual food-spice recommendation
+##### List of Personal Preferences
+Users can access the list of personal preferences and dietary guidelines to be used by the Recommendation Engine:
+1. Browse the list of entred preferences
+2. Add new preferences
+3. Delete existing preferences
+4. Edit existing preferences
+5. For each preferences in the list, the user can:
+    - give it a title
+    - select the flavour or ingredient from the controlled Vocabulary List
+    - define if the preference is a subjective preference or a dietary requirement
+    - for a subjective preference, users will define if it is a "Like" (in which case the ingredient will be upweighted by the Recommendation Engine) or a "Dislike" (in which case the ingredient will be downweighted by the Recommendation Engine)
+    - for a dietary requirement, users will define if it is an "Allergy" or "Intolerance"; in both cases the ingredient will be removed from the results by the Recommendation Engine
 
 ##### Generate Recommendation
 Users can submit a query to generate a new food-spice recommendation and:
