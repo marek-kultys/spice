@@ -64,3 +64,4 @@ fastlane/test_output
 # Other files:
 *.pdf
 *.txt
+.DS_Store
