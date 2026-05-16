@@ -2,6 +2,7 @@ const CACHE = "spice-v1";
 const ASSETS = [
   "./",
   "./index.html",
+  "./styles.css",
   "./manifest.json",
   "./pairings.json",
   "./vocabulary.json",
