@@ -1,0 +1,80 @@
+{
+    "inputs": [
+        {
+            "ingredients": [
+                {
+                    "name": "Broccoli", 
+                    "role": "main"
+                },
+                {
+                    "name": "Tomato"
+                },
+                {
+                    "name": "Onion"
+                }
+            ]
+        },
+        {
+            "preferences": [
+                {
+                    "name": "Walnuts",
+                    "preference_type": "dietary",
+                    "preference_detail": "allergy"
+                },
+                {
+                    "name": "Anchovies",
+                    "preference_type": "dietary",
+                    "preference_detail": "intolerance"
+                },
+                {
+                    "name": "Tomato",
+                    "preference_type": "subjective",
+                    "preference_detail": "like"
+                },
+                {
+                    "name": "Corriander",
+                    "preference_type": "subjective",
+                    "preference_detail": "dislike"
+                }
+            ]
+        }
+    ],
+    "pairings": {
+        "flavours": [
+            {
+                "name": "Garlic",
+                "direction": "go",
+                "strength": "Very highly recommended"
+            },
+            {
+                "name": "Olive oil",
+                "direction": "go",
+                "strength": "Very highly recommended"
+            },
+            {
+                "name": "Chile peppers",
+                "direction": "go",
+                "strength": "Recommended"
+            },
+            {
+                "name": "Mustard / mustard seeds",
+                "direction": "go",
+                "strength": "Recommended"
+            },
+            {
+                "name": "Oregano",
+                "direction": "go",
+                "strength": "Recommended"
+            },
+            {
+                "name": "Lemon juice",
+                "direction": "go",
+                "strength": "Recommended"
+            },
+            {
+                "name": "Cinnamon",
+                "direction": "no-go"
+            }
+        ]
+    }
+}
