@@ -57,12 +57,24 @@ Do not implement any of the following (full product features, not MVP):
 - User accounts or any backend
 - Any cloud connectivity
 
+## Offline support (PWA)
+
+The app must work fully offline after the first visit. Implement this as a Progressive Web App using a Service Worker and a Web App Manifest:
+
+- `manifest.json` — declares the app name ("Spice"), a short name, `display: "standalone"` (so it opens without browser chrome), and `start_url: "."`. Include a simple icon (can be an inline SVG or a generated PNG — keep it minimal).
+- `sw.js` — a Service Worker that pre-caches `index.html`, `pairings.json`, `vocabulary.json`, and `manifest.json` on install, and serves everything from cache on subsequent fetches (cache-first strategy). Use a versioned cache name (e.g. `spice-v1`) so it can be updated later.
+- In `index.html`, register the Service Worker with `navigator.serviceWorker.register('./sw.js')` on page load.
+
+On first visit the user must be online — after that the app works fully offline, including in the kitchen with no Wi-Fi.
+
 ## File structure
 
 Keep it simple:
 
 ```
 index.html        ← the entire app
+manifest.json     ← PWA manifest for home screen install
+sw.js             ← Service Worker for offline caching
 pairings.json     ← generated from pairings.csv
 vocabulary.json   ← already exists, use as-is
 ```
